@@ -97,21 +97,21 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border bg-card/90 backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-lg items-center justify-between px-4">
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl overflow-hidden">
+          <div className="flex items-center gap-2.5 min-w-0 flex-1">
+            <div className="flex h-8 w-8 sm:h-10 sm:w-10 items-center justify-center rounded-xl overflow-hidden shrink-0">
               <img src="/LogoVidaPlenaTransparente.png" alt="Logo" className="h-full w-full object-contain" />
             </div>
-            <div>
-              <h1 className="text-base font-bold text-foreground leading-tight">
+            <div className="min-w-0">
+              <h1 className="text-sm sm:text-base font-bold text-foreground leading-tight truncate">
                 Campaña 1000 Amigos
               </h1>
-              <p className="text-xs text-muted-foreground leading-tight">
+              <p className="text-[10px] sm:text-xs text-muted-foreground leading-tight truncate">
                 Ahorro para la fundación
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <Link href="/historial">
               <Button
                 variant="outline"

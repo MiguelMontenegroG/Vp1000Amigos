@@ -34,13 +34,13 @@ export function SavingsProgress({ current, goal }: SavingsProgressProps) {
         <div className="flex items-end justify-between">
           <div>
             <p className="text-xs text-muted-foreground">Ahorrado</p>
-            <p className="text-2xl font-bold text-primary leading-tight">
+            <p className="text-xl sm:text-2xl font-bold text-primary leading-tight break-all">
               {formatCurrency(current)}
             </p>
           </div>
-          <div className="text-right">
+          <div className="text-right shrink-0 ml-2">
             <p className="text-xs text-muted-foreground">Meta</p>
-            <p className="text-base font-semibold text-foreground">
+            <p className="text-sm sm:text-base font-semibold text-foreground whitespace-nowrap">
               {formatCurrency(goal)}
             </p>
           </div>
@@ -68,31 +68,31 @@ export function SavingsProgress({ current, goal }: SavingsProgressProps) {
             <span className="font-semibold text-primary">
               {percentage.toFixed(1)}% completado
             </span>
-            <span className="text-muted-foreground">
+            <span className="text-muted-foreground text-[11px] sm:text-xs whitespace-nowrap ml-1">
               Faltan {formatCurrency(remaining)}
             </span>
           </div>
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-3 gap-2 rounded-lg bg-secondary/50 p-3">
-          <div className="text-center">
-            <p className="text-lg font-bold text-foreground leading-tight">
+        <div className="grid grid-cols-3 gap-2 rounded-lg bg-secondary/50 p-2 sm:p-3">
+          <div className="text-center min-w-0">
+            <p className="text-base sm:text-lg font-bold text-foreground leading-tight">
               {percentage.toFixed(0)}%
             </p>
-            <p className="text-xs text-muted-foreground">Avance</p>
+            <p className="text-[11px] sm:text-xs text-muted-foreground">Avance</p>
           </div>
-          <div className="text-center border-x border-border">
-            <p className="text-sm font-bold text-accent leading-tight">
+          <div className="text-center border-x border-border min-w-0 px-1">
+            <p className="text-xs sm:text-sm font-bold text-accent leading-tight truncate">
               {formatCurrency(remaining)}
             </p>
-            <p className="text-xs text-muted-foreground">Restante</p>
+            <p className="text-[11px] sm:text-xs text-muted-foreground">Restante</p>
           </div>
-          <div className="text-center">
-            <p className="text-sm font-bold text-primary leading-tight">
+          <div className="text-center min-w-0">
+            <p className="text-xs sm:text-sm font-bold text-primary leading-tight truncate">
               {formatCurrency(goal)}
             </p>
-            <p className="text-xs text-muted-foreground">Meta</p>
+            <p className="text-[11px] sm:text-xs text-muted-foreground">Meta</p>
           </div>
         </div>
       </CardContent>
