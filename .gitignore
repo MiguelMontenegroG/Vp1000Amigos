@@ -1,32 +1,28 @@
-### IntelliJ IDEA ###
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# Node
+node_modules/
+.next/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-### Kotlin ###
-.kotlin
+# Environment
+.env*.local
+.env*.production
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
+# IDE
+.idea/
 .vscode/
+*.iml
+out/
+.kotlin/
 
-### Mac OS ###
-.DS_Store
+# OS
+.DS_StoreThumbs.db
+
+# Build
+dist/
+build/
+*.tsbuildinfo
+
+# Vercel
+.vercel/
